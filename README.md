@@ -1,4 +1,4 @@
-# csc-693-traffic_sign
+# csc-693-road_sign
 
 
 ## Table of contents
