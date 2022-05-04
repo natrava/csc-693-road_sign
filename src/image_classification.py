@@ -14,10 +14,10 @@ labels = None
 
 try:
     # load the model, alloc the model file on the heap if we have at least 64K free after loading
-    net = tf.load("traffic_QuantPruned.tflite", load_to_fb=uos.stat('traffic_QuantPruned.tflite')[6] > (gc.mem_free() - (64*1024)))
+    net = tf.load("Road_QuantPruned.tflite", load_to_fb=uos.stat('Road_QuantPruned.tflite')[6] > (gc.mem_free() - (64*1024)))
 except Exception as e:
     print(e)
-    raise Exception('Failed to load "trained.tflite", did you copy the .tflite and labels.txt file onto the mass-storage device? (' + str(e) + ')')
+    raise Exception('Failed to load "Road_QuantPruned.tflite", did you copy the .tflite and labels.txt file onto the mass-storage device? (' + str(e) + ')')
 
 try:
     labels = [line.rstrip('\n') for line in open("labels.txt")]
@@ -43,6 +43,6 @@ while(True):
             l2.append(predictions_list[i][0])
     print("The sign is",l2[l1.index(max(l1))])
    # print("The confidence interval is",max(l1))
-    print(clock.fps(), "fps")
+   # print(clock.fps(), "fps")
 #    time.sleep(0.5)
 
