@@ -11,14 +11,16 @@
 
 ## Introduction
 * General information:
-   * with the help of image we have created using portenta H7, we genrated a model capable of predicting traffic road signs
-   * the python file creating the tflite file is written in jupyter notebook and the model is then deployed into the micro controller.
+   * With the help of Portenta H7 camera we have collected the image data of 8 road signs and then developed a model to classify the images
+   * We then used the images taken from Portenta to tarin the Convolution Nueral Network model
+   * Later we Pruned and Quantized the model to reduce the size of the model
+   * We then created the TFlite file and is then deployed into the micro controller
+   * The .py file which is used in the deployment has been placed in the **src** path
 
 ## Project Aim
 * Goals of this project:
    * To develop a model that can predict different road signs accurately
-   * run the model in the portenta micro controller
-   * It detects image using portents camera and classifies the image(road sign).
+   * Deploy and run the model on the portenta micro controller and detect the road sign
 
 ## Technologies
 Project is created with:
@@ -34,13 +36,14 @@ Project is created with:
     * contains images taken using portenta H7 in the project
 
 ## Team Member Information
-#### Narasimha Atreya 
 
-#### Anveesh Avirneni 
+#### Narasimha Atreya : Data Collection and Modelling
 
-#### Sardar Karan Singh 
+#### Anveesh Avirneni : Data Collection and Deployment
 
-#### Praneeth Aluru
+#### Sardar Karan Singh : Data Collection and Documentation
+
+#### Praneeth Aluru : Data Collection, Pruning and Quantization
 
 
 
